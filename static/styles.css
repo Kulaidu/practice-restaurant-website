@@ -193,6 +193,7 @@ footer {
     display: grid;
     grid-template-columns: 3fr 1fr;
     background-color: var(--color-primary);
+    border-top: 1px solid var(--color-accent);
 }
 
 footer p{
