@@ -94,19 +94,19 @@ nav {
     background: var(--color-accent);
 }
 
-ul {
+nav ul {
     width: 30%;
     display: flex;
     justify-content: space-around;
 }
 
-li {
+nav li {
     display: inline-block;
     display: flex;
     align-items: end;
 }
 
-li a {
+nav li a {
     color: var(--color-secondary);
 }
 
@@ -204,7 +204,7 @@ section:not(.hero) {
     width: 100px;
 }
 
-#nav-tabs input{
+.nav-radio {
     display: none;
 }
 
@@ -216,7 +216,13 @@ section:not(.hero) {
     border-radius: 10px;
 }
 
-#nav-tabs input[type="radio"]:checked + label {
+#tab-all:checked ~ #nav-tabs label[for="tab-all"],
+#tab-coffee:checked ~ #nav-tabs label[for="tab-coffee"],
+#tab-specialty:checked ~ #nav-tabs label[for="tab-specialty"],
+#tab-pastries:checked ~ #nav-tabs label[for="tab-pastries"],
+#tab-brunch:checked ~ #nav-tabs label[for="tab-brunch"], 
+#tab-tea:checked ~ #nav-tabs label[for="tab-tea"],
+#tab-wine:checked ~ #nav-tabs label[for="tab-wine"]{
     font-weight: bold;
     color: var(--color-background);
     background-color: var(--color-accent);
@@ -271,6 +277,22 @@ section:not(.hero) {
     font-size: larger;
 }
 
+.menus {
+    display: none;
+}
+
+#tab-all:checked ~ #menu-container .menus,
+#tab-coffee:checked ~ #menu-container .coffee,
+#tab-specialty:checked ~ #menu-container .specialty,
+#tab-pastries:checked ~ #menu-container .pastries,
+#tab-brunch:checked ~ #menu-container .brunch,
+#tab-tea:checked ~ #menu-container .tea,
+#tab-wine:checked ~ #menu-container .wine{
+    display: block;
+}
+
+
+
 footer {
     padding: 3vh 5vw;
     display: grid;
@@ -299,4 +321,58 @@ footer p{
     max-width: 60px;
     max-height: 60px;
     padding: 0
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+form label{
+    margin-top: 1vh;
+    display: block;
+    text-align: left;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+    margin: 0.5rem 0 0;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-sub);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px var(--color-sub);
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+section.policy {
+    background-color: var(--color-primary);
+    color: var(--color-background)
+}
+
+.policy p {
+    color: var(--color-background);
+    text-indent: 2rem;
 }
