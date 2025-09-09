@@ -134,12 +134,17 @@ section:not(.hero) {
     filter: brightness(.25) blur(3px);
 }
 
-.hero a {
+.hero-button {
     background-color: var(--color-primary);
     color: var(--color-secondary);
-    padding: 10px;
+    padding: 15px;
     border: 1px solid var(--color-accent);
     border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.hero-button:hover {
+    background-color: var(--color-text);
 }
 
 .hero p {
@@ -365,6 +370,7 @@ form button {
     border: none;
     color: var(--color-accent);
     font-weight: bold;
+    cursor: pointer;
 }
 
 section.policy {
@@ -375,4 +381,17 @@ section.policy {
 .policy p {
     color: var(--color-background);
     text-indent: 2rem;
+}
+
+address div{
+    padding: 20px;
+}
+
+address p {
+    text-indent: 2rem;
+}
+
+address div:hover {
+    border: 1px solid var(--color-accent);
+    box-shadow: 2px 2px 5px var(--color-sub);
 }
