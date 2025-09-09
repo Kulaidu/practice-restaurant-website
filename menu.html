@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Le Blanc</title>
+        <title>Le Blanc - Menu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Where every cup is a masterpiece">
         <link rel="stylesheet" href="./static/styles.css">
@@ -23,33 +23,29 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="reservations.html">Reservations</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contacts.html">Contact</a></li>
             </ul>
         </nav>
 
         <main>
             <h1>Menu</h1>
+
+            <input type="radio" class="nav-radio" id="tab-all" name="tab" checked>
+            <input type="radio" class="nav-radio" id="tab-coffee" name="tab">
+            <input type="radio" class="nav-radio" id="tab-specialty" name="tab">
+            <input type="radio" class="nav-radio" id="tab-pastries" name="tab">
+            <input type="radio" class="nav-radio" id="tab-brunch" name="tab">
+            <input type="radio" class="nav-radio" id="tab-tea" name="tab">
+            <input type="radio" class="nav-radio" id="tab-wine" name="tab">
+
             <div id="nav-tabs">
-                <input type="radio" id="tab-all" name="tab" checked>
-                <label for="tab-all">All</label>
-
-                <input type="radio" id="tab-coffee" name="tab">
-                <label for="tab-coffee">Coffee</label>
-
-                <input type="radio" id="tab-specialty" name="tab">
-                <label for="tab-specialty">Specialty</label>
-
-                <input type="radio" id="tab-pastries" name="tab">
-                <label for="tab-pastries">Pastries</label>
-
-                <input type="radio" id="tab-brunch" name="tab">
-                <label for="tab-brunch">Brunch</label>
-
-                <input type="radio" id="tab-tea" name="tab">
-                <label for="tab-tea">Tea</label>
-
-                <input type="radio" id="tab-wine" name="tab">
-                <label for="tab-wine">Wine</label>
+                <label for="tab-all" tabindex="0">All</label>
+                <label for="tab-coffee" tabindex="0">Coffee</label>
+                <label for="tab-specialty" tabindex="0">Specialties</label>
+                <label for="tab-pastries" tabindex="0">Pastries</label>
+                <label for="tab-brunch" tabindex="0">Brunch</label>
+                <label for="tab-tea" tabindex="0">Tea</label>
+                <label for="tab-wine" tabindex="0">Wine</label>
             </div>
 
             <section id="menu-container">
@@ -275,7 +271,7 @@
                     <h2>Teas</h2>
                     <div class="menu-item-container">
                         <div class="menu-item-card">
-                                <img class="menu-item-image" src="" alt="Earl Grey." loading="lazy">
+                                <img class="menu-item-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0106%2F7915%2F6799%2Farticles%2FEarl-Grey.jpg%3Fv%3D1668067450&f=1&nofb=1&ipt=0aaa567c32d739710e4ff0a00c238cd43b5fe1f61346cbf05e152a3fbf50ae30" alt="Earl Grey." loading="lazy">
                             <div class="menu-item-description">
                                 <h3>Earl Grey</h3>
                                 <p>Classic black tea infused with bergamot citrus aroma</p>
@@ -284,7 +280,7 @@
                         </div>
 
                         <div class="menu-item-card">
-                                <img class="menu-item-image" src="" alt="Chamomile." loading="lazy">
+                                <img class="menu-item-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.mos.cms.futurecdn.net%2FB8aQ9RLedeBi47e72tA28n-1200-80.jpg&f=1&nofb=1&ipt=efd5f659fd14c87af779270d3f311e9cc56d17d819663d5c56e2eb48748261ae" alt="Chamomile." loading="lazy">
                             <div class="menu-item-description">
                                 <h3>Chamomile</h3>
                                 <p>Soothing herbal tea with calming floral notes</p>
@@ -293,7 +289,7 @@
                         </div>
 
                         <div class="menu-item-card">
-                                <img class="menu-item-image" src="" alt="Matcha Latte." loading="lazy">
+                                <img class="menu-item-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.forkintheroad.co%2Fwp-content%2Fuploads%2F2021%2F01%2Fpeppermint-matcha-latte-122.jpg&f=1&nofb=1&ipt=c17700c597e87bdcd248d9ff0abb51976d190cf62e63bede4565bb1d883a150e" alt="Matcha Latte." loading="lazy">
                             <div class="menu-item-description">
                                 <h3>Matcha Latte</h3>
                                 <p>Stone-ground Japanese matcha whisked with milk</p>
@@ -302,7 +298,7 @@
                         </div>
 
                         <div class="menu-item-card">
-                                <img class="menu-item-image" src="" alt="Hibiscus Iced." loading="lazy">
+                                <img class="menu-item-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fasianinspirations.com.au%2Fwp-content%2Fuploads%2F2018%2F10%2FR01125_Hibiscus-Tea.jpg&f=1&nofb=1&ipt=48887dba332145ba0efa43946c86eca507d68b50f3e5b91cf76c904b27ca821a" alt="Hibiscus Iced." loading="lazy">
                             <div class="menu-item-description">
                                 <h3>Hibiscus Iced</h3>
                                 <p>Tart, refreshing hibiscus tea served chilled</p>
@@ -316,7 +312,7 @@
                     <h2>Wine</h2>
                     <div class="menu-item-container">
                         <div class="menu-item-card">
-                                <img class="menu-item-image" src="" alt="House Red." loading="lazy">
+                                <img class="menu-item-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thaiwatsadu.com%2F_next%2Fimage%3Furl%3Dhttps%3A%252F%252Fpim.thaiwatsadu.com%252FTWDPIM%252Fweb%252FThumbnail%252FImage%252F0906%252F60392940_3.jpg%26w%3D1920%26q%3D75&f=1&nofb=1&ipt=411a5e049d1ed4c2123db051df467a4787ca1fb02f9b296b507d9b8519ffbb57" alt="House Red." loading="lazy">
                             <div class="menu-item-description">
                                 <h3>House Red</h3>
                                 <p>Medium-bodied red with dark fruit notes</p>
@@ -325,7 +321,7 @@
                         </div>
 
                         <div class="menu-item-card">
-                                <img class="menu-item-image" src="" alt="House White." loading="lazy">
+                                <img class="menu-item-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fglencairn.co.uk%2Fwp-content%2Fuploads%2F2019%2F07%2Fwhite-wine-sq.jpg&f=1&nofb=1&ipt=f2dbf470d391a2f269c71826fc2a91fa820f076cbbcca37bcb62326892e33ab7" alt="House White." loading="lazy">
                             <div class="menu-item-description">
                                 <h3>House White</h3>
                                 <p>Crisp white wine with citrus and floral aromas</p>
@@ -334,7 +330,7 @@
                         </div>
 
                         <div class="menu-item-card">
-                                <img class="menu-item-image" src="" alt="Mimosa." loading="lazy">
+                                <img class="menu-item-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.giallozafferano.com%2Fimages%2F264-26430%2FMimosa-Cocktail_1200x800.jpg&f=1&nofb=1&ipt=7a8eb55322277bf0c05b8089deef3dd0cccdf60b62bdd54830e7d52528e32ce4" alt="Mimosa." loading="lazy">
                             <div class="menu-item-description">
                                 <h3>Mimosa</h3>
                                 <p>Refreshing mix of sparkling wine and orange juice</p>
@@ -343,7 +339,7 @@
                         </div>
 
                         <div class="menu-item-card">
-                                <img class="menu-item-image" src="" alt="Classic Martini." loading="lazy">
+                                <img class="menu-item-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.foodfaithfitness.com%2Fwp-content%2Fuploads%2F2023%2F06%2FA_dry-martini-Featured_2-683x1024.jpg.webp&f=1&nofb=1&ipt=1b4db1ec615036c91327c1f0bc7d2c2bc91b24946e19f75bc18e67052ff93cfb" alt="Classic Martini." loading="lazy">
                             <div class="menu-item-description">
                                 <h3>Classic Martini</h3>
                                 <p>Elegant cocktail with gin, vermouth, and olive garnish</p>

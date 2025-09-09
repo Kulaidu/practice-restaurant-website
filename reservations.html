@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Le Blanc</title>
+        <title>Le Blanc - Reservations</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Where every cup is a masterpiece">
         <link rel="stylesheet" href="./static/styles.css">
@@ -23,11 +23,106 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="reservations.html">Reservations</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contacts.html">Contact</a></li>
             </ul>
         </nav>
 
         <main>
+            <section class="hero">
+                <img class="hero-bg" src="https://images.pexels.com/photos/2290070/pexels-photo-2290070.jpeg" alt="Cafe interior. Photo by Waldemar Brandt: https://www.pexels.com/photo/dining-area-of-the-building-with-no-people-2290070/" loading="eager">
+                <h1>Reserve a table at Le Blanc</h1>
+                <p>"Experience quality coffee and unforgettable moments"</p>
+            </section>
+
+            <section class="reservation-section">
+                <h2>Reservation Form</h2>
+                <form action="#" autocomplete="on">
+                    <div>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                    
+                    <div>
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="pnum">Phone Number</label>
+                        <input type="tel" id="pnum" name="pnum" required pattern="^\+?[0-9\s\-]{10,15}$">
+                    </div>
+
+                    <div>
+                        <label for="date">Date to Reserve</label>
+                        <input type="date" id="date" name="date" required min="2025-09-01">
+                    </div>
+
+                    <div>
+                        <label for="time">Time to Reserve</label>
+                        <input type="time" id="time" name="time" required min="06:00" max="18:00">
+                    </div>
+
+                    <div>
+                        <label for="nguest">Number of Guests</label>
+                        <input type="number" id="nguest" name="nguest" required min="1" max="30">
+                    </div>
+
+                    <div>
+                        <label for="requests">Special Requests</label>
+                        <textarea id="requests" name="requests" placeholder="Dietary needs, occasion, etc." rows="5" maxlength="200"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit">Reserve Now</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="policy">
+                <h2>Reservation Policy</h2>
+
+                <div>
+                    <ul>
+                        <li>
+                            <h3>Reservation Window</h3>
+                            <p>Reservations can be made up to 30 days in advance. Same-day reservations are subject to availability.</p>
+                        </li>
+                        <li>
+                            <h3>Arrival Time</h3>
+                            <p>Reserved tables will be held for 15 minutes past the booking time. After this period, the table may be released to walk-in guests.</p>
+                        </li>
+                        <li>
+                            <h3>Group Reservations</h3>
+                            <p>For parties of 8 guests or more, we recommend calling in advance to ensure proper seating arrangements.</p>
+                        </li>
+                        <li>
+                            <h3>Special Requests</h3>
+                            <p>While we do our best to accommodate dietary restrictions, allergies, or special celebrations, these requests are subject to availability.</p>
+                        </li>
+                        <li>
+                            <h3>Cancellation Policy</h3>
+                            <p>If you are unable to attend, please notify us at least 2 hours in advance. Frequent no-shows may affect future reservations.</p>
+                        </li>
+                        <li>
+                            <h3>Seating Preferences</h3>
+                            <p>Indoor and outdoor seating preferences can be requested but are not guaranteed.</p>
+                        </li>
+                        <li>
+                            <h3>Walk-Ins Welcome</h3>
+                            <p>Walk-in guests are always welcome and will be seated based on availability.</p>
+                        </li>
+                        <li>
+                            <h3>Operating Hours</h3>
+                            <p>Confirmations of reservations are available only during our standard café hours: 6:00 AM – 8:00 PM daily.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </main>
 
         <footer>
