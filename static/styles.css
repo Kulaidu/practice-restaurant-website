@@ -93,10 +93,11 @@ nav {
     height: 3px;
     margin: 4px 0;
     background: var(--color-accent);
+    transition: ease 0.5s;
 }
 
 nav ul {
-    width: 35%;
+    width: 40%;
     display: flex;
     justify-content: space-around;
     padding: 1rem;
@@ -108,13 +109,12 @@ nav li {
 
 nav li a {
     color: var(--color-secondary);
-    padding: 0.5rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 10px;
     transition: ease 0.5s;
 }
 
-nav li .active, nav li a:active {
-    border: 1px solid var(--color-accent);
+nav li a.active {
     background-color: var(--color-background);
     color: var(--color-accent);
     font-weight: bold;
@@ -162,6 +162,7 @@ section:not(.hero) {
 
 .hero-button:hover {
     background-color: var(--color-text);
+    font-weight: bold;
 }
 
 .hero-button:active {
@@ -284,7 +285,7 @@ section:not(.hero) {
     flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--color-sub);
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px var(--color-sub);
     transition: ease-in 0.25s;
 }
@@ -357,6 +358,12 @@ footer p{
 
 .footer-logo {
     display: inline-block;
+    transition: ease-in .25s;
+    border-radius: 15px;
+}
+
+.footer-logo:hover {
+    background-color: var(--color-background);
 }
 
 .footer-logo svg {
@@ -398,6 +405,23 @@ form button {
     border: 1px solid var(--color-sub);
     border-radius: 10px;
     box-shadow: 2px 2px 8px var(--color-sub);
+    transition: ease 0.5s;
+}
+
+form input:focus, 
+form textarea:focus {
+    border: 1px solid var(--color-accent);
+    padding: 1.25rem;
+}
+
+form button:hover {
+    background-color: var(--color-text);
+    font-weight: bold;
+}
+
+form button:active {
+    background-color: var(--color-secondary);
+    transition: none;
 }
 
 form textarea {
@@ -422,8 +446,15 @@ section.policy {
     text-indent: 2rem;
 }
 
+.policy li {
+    border-bottom: 1px solid var(--color-accent);
+    padding: 1rem;
+}
+
 address div{
     padding: 20px;
+    border-bottom: 1px solid var(--color-accent);
+    transition: ease 0.5s;
 }
 
 address p {
@@ -431,6 +462,97 @@ address p {
 }
 
 address div:hover {
-    border: 1px solid var(--color-accent);
+    border: 0.5px solid var(--color-accent);
     box-shadow: 2px 2px 5px var(--color-sub);
+}
+
+@media (max-width: 768px){
+    nav {
+        justify-content: space-between;
+        padding-right: 5vw;
+    }
+
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid var(--color-accent);
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+    }
+
+    nav ul li a {
+        padding: 0;
+    }
+
+    nav li a.active {
+        padding: 0.5rem;
+        background-color: transparent;
+    }
+
+    nav li:has(.active) {
+        background-color: var(--color-background);
+        border-radius: 10px;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav::after {
+        right: -100vw;
+        transition: ease 0.5s;
+        opacity: 0;
+    }
+
+    nav:has(#nav-menu:checked)::after {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-primary);
+        opacity: 0.75;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+
+    #nav-menu:checked + .nav-toggle .burger-line {
+        background-color: var(--color-background);
+    }
+
+    nav ul {
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-primary);
+        z-index: 11;
+        width: 50vw;
+        height: 30vh;
+        justify-content: space-evenly;
+        top: 10vh;
+        margin: 0;
+        right: -50vw;
+        opacity: 0;
+        transition: ease 0.5s;
+    }
+
+    #nav-menu:checked ~ ul {
+        right: 0;
+        opacity: 1;
+    }
+
+    html:has(#nav-menu:checked),
+    body:has(#nav-menu:checked) {
+        overflow: hidden;
+    }
+
+    .highlights .highlight-menus {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 33vh);
+    }
+
+    
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
