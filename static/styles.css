@@ -97,10 +97,10 @@ nav {
 }
 
 nav ul {
-    width: 40%;
+    width: 45%;
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 nav li {
@@ -231,7 +231,13 @@ section:not(.hero) {
     justify-content: space-evenly;
     align-items: center;
     color: var(--color-text);
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-accent);
     justify-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 10vh;
+    z-index: 1;
 }
 
 #nav-tabs::before, #nav-tabs::after {
@@ -250,6 +256,8 @@ section:not(.hero) {
     width: 8vw;
     border-radius: 10px;
     transition: ease 0.5s;
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
 }
 
 #nav-tabs label:hover {
@@ -550,7 +558,35 @@ address div:hover {
         grid-template-rows: repeat(3, 33vh);
     }
 
-    
+    .hero {
+        padding: 5vh 5vw;
+        font-size: smaller;
+    }
+
+    #nav-tabs {
+        height: 6vh;
+        background-color: var(--color-background);
+    }
+
+    #nav-tabs > label {
+        width: 22vw;
+        padding: 0.05rem;
+        margin: 0;
+        font-size: small;
+    }
+
+    #nav-tabs::after, #nav-tabs::before {
+        display: none;
+    }
+
+    .menu-item-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .policy p {
+        text-indent: 0;
+        text-align: left;
+    }
 
     footer {
         grid-template-columns: repeat(2, 1fr);
