@@ -25,6 +25,7 @@ body {
 main {
     padding-top: 10vh;
     margin: 0;
+    background-color: var(--color-background);
 }
 
 p, a {
@@ -142,12 +143,16 @@ section:not(.hero) {
 
 .hero-bg {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     object-fit: cover;
     height: 100%;
     width: 100%;
     overflow: hidden;
     filter: brightness(.25) blur(3px);
+}
+
+.hero h1, .hero p, .hero-button {
+    z-index: 1;
 }
 
 .hero-button {
@@ -223,6 +228,7 @@ section:not(.hero) {
     z-index: 1;
     font-size: 1.25rem;
     color: var(--color-background);
+    text-shadow: 0 0 3px var(--color-primary), 0 0 1rem var(--color-accent);
 }
 
 #nav-tabs {
@@ -238,6 +244,7 @@ section:not(.hero) {
     position: sticky;
     top: 10vh;
     z-index: 1;
+    margin: 0 auto;
 }
 
 #nav-tabs::before, #nav-tabs::after {
@@ -321,7 +328,8 @@ section:not(.hero) {
 .menu-item-description p {
     margin: 3px 0;
     flex-grow: 1;
-    color: var(--color-sub)
+    color: var(--color-sub);
+    font-size: small;
 }
 
 .menu-item-description h4 {
@@ -474,7 +482,7 @@ address div:hover {
     box-shadow: 2px 2px 5px var(--color-sub);
 }
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
     nav {
         justify-content: space-between;
         padding-right: 5vw;
@@ -533,7 +541,7 @@ address div:hover {
         align-items: center;
         background-color: var(--color-primary);
         z-index: 11;
-        width: 50vw;
+        width: 30vw;
         height: 30vh;
         justify-content: space-evenly;
         top: 10vh;
@@ -554,8 +562,7 @@ address div:hover {
     }
 
     .highlights .highlight-menus {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 33vh);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .hero {
@@ -563,13 +570,18 @@ address div:hover {
         font-size: smaller;
     }
 
+    section:not(.hero) {
+        min-height: auto;
+    }
+
     #nav-tabs {
-        height: 6vh;
+        height: 5vh;
+        width: 95vw;
         background-color: var(--color-background);
     }
 
     #nav-tabs > label {
-        width: 22vw;
+        width: 13vw;
         padding: 0.05rem;
         margin: 0;
         font-size: small;
@@ -580,7 +592,7 @@ address div:hover {
     }
 
     .menu-item-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .policy p {
@@ -590,5 +602,56 @@ address div:hover {
 
     footer {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .highlights .highlight-menus {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 33vh);
+    }
+
+    nav ul {
+        width: 50vw;
+    }
+
+    #nav-tabs {
+        height: 6vh;
+    }
+
+    #nav-tabs > label {
+        width: 22vw;
+    }
+
+    .menu-item-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 375px) {
+    nav ul {
+        height: 50vh;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    .about img {
+        height: 25vh;
+    }
+
+    #nav-tabs {
+        height: 8vh;
+    }
+
+    .menu-item-description h3 {
+        font-size: 0.9rem;
+    }
+
+    address p {
+        text-indent: 0;
     }
 }
